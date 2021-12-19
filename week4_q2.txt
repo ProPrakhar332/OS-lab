@@ -1,0 +1,26 @@
+Program No. 4
+
+Name:		Prakhar Mamgain
+Roll No.:	35
+Section:	CST
+Semester:	5th
+
+
+Objective:	Implementation of ZOMBIE PROCESS
+
+
+Solution:
+
+	#include<stdio.h>
+	#include<unistd.h>
+	#include<stdlib.h>
+	int main()
+	{
+        	pid_t pid = fork();
+        	if(pid!=0)
+			while(1)
+				sleep(50);
+		else
+                	exit(0);
+        	return 0;
+	}

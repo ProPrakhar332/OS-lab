@@ -1,0 +1,21 @@
+Program No. 1
+
+Name:		Prakhar Mamgain
+Roll No.:	35
+Section:	CST
+Semester:	5th
+
+
+Objective:	Demonstration of FORK() System Call - Single FORK()
+
+
+Solution:
+
+	#include<stdio.h>
+	#include<unistd.h>
+	int main()
+	{
+		fork();
+		printf("LINUX\n");
+		return 0;
+	}

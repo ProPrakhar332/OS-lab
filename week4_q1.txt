@@ -1,0 +1,33 @@
+Program No. 4
+
+Name:		Prakhar Mamgain
+Roll No.:	35
+Section:	CST
+Semester:	5th
+
+
+Objective:	Implementation of ORPHAN PROCESS
+
+
+Solution:
+
+	#include<stdio.h>
+	#include<unistd.h>
+	int main()
+	{
+		pid_t pid;
+		pid = fork();
+		if(pid == 0)
+		{
+			sleep(6);
+	        	printf("I am CHILD.");
+			printf("\nChild Process: %d", getpid(),);
+			printf("\nParent Process: %d \n", getppid());
+        	}
+		else if(pid>0)
+                	printf("I am PARENT.\nParent Process: %d, Grand Parent Process: %d \n", pid, getpid());
+			printf("\nParent Process: %d",pid);
+			printf("\nGrand Parent Process: %d", getpid());
+        	printf("\nTERMINATING PID = %d\n",getpid());
+        	return 0;
+	}
